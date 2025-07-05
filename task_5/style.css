@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+.moving-text {
+  position: absolute;
+  top: 30px;
+  left: -100%;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: moveText 10s linear infinite;
+  color: #00ffe1;
+  z-index: 10;
+   
+}
+
+@keyframes moveText {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #aaa;
+  margin-top: 100px;
+}
+
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #1e1e2f, #252542);
+  color: white;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-content .highlight {
+  color: #00ffe1;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #00ffe1;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #00c4b4;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+    background: linear-gradient(120deg, #1e1e2f, #252542);
+}
+
+.filter-buttons button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #00ffe1;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background-color: #00c4b4;
+}
+
+#portfolio {
+  display: none;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  color: #111;
+  min-height: 100vh;
+    background: linear-gradient(120deg, #1e1e2f, #252542);
+}
+
+#portfolio.show {
+  display: block;
+}
+
+.portfolio-card {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #055c7b; 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: none;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.5s ease;
+}
+
+
+
+.portfolio-card.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-section.hide {
+  display: none;
+}
